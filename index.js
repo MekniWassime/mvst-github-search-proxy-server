@@ -22,15 +22,18 @@ app.get('/getAccessToken', async (req, res) => {
         return res.status(400).send({ "message": "please provide 'code' parameter" })
 
     const params = "?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SERCRET + "&code=" + req.query.code;
-
-    const response = await fetch("https://github.com/login/oauth/access_token" + params, {
-        method: "POST",
-        headers: {
-            "Accept": "application/json"
-        }
-    });
-
-    res.json(response.json());
+    try {
+        const response = await fetch("https://github.com/login/oauth/access_token" + params, {
+            method: "POST",
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+        const data = await response.json()
+        res.json(data);
+    } catch (error) {
+        res.status(500).send({ "message": "Internal error" })
+    }
 })
 
 app.listen(PORT, () => {
