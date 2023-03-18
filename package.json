@@ -1,0 +1,26 @@
+{
+  "name": "mvst-github-search-proxy-server",
+  "version": "1.0.0",
+  "description": "A proxy for Github's O-Auth ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MekniWassime/mvst-github-search-proxy-server.git"
+  },
+  "author": "Mekni_Wassime <mekni.wassime@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MekniWassime/mvst-github-search-proxy-server/issues"
+  },
+  "homepage": "https://github.com/MekniWassime/mvst-github-search-proxy-server#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1"
+  }
+}
