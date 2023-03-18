@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 
 const CLIENT_ID = process.env.CLIENT_ID
 const CLIENT_SERCRET = process.env.CLIENT_SERCRET
-const PORT = process.env.PORT | 3000
+const PORT = process.env.SERVER_PORT | 3000
 
 var app = express();
 
